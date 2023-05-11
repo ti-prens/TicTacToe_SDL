@@ -258,13 +258,19 @@ int find_best_move(board_t *B, bool turn) {
   }
   // stop double win
   if ((tp_B.BOARD[0] == !myMark && tp_B.BOARD[8] == !myMark) ||
-      (tp_B.BOARD[2] == !myMark && tp_B.BOARD[6] == !myMark)) {
+      (tp_B.BOARD[2] == !myMark && tp_B.BOARD[6] == !myMark) ) {
     for (int i = 5; i < 9; i++) {
       best_mv = best_case_order[i];
       if (tp_B.BOARD[best_mv] == NIET) {
         return best_mv;
       }
     }
+  }
+  if ((tp_B.BOARD[5] == !myMark && tp_B.BOARD[7] == !myMark) ) {
+      best_mv = 8;
+      if (tp_B.BOARD[best_mv] == NIET) {
+        return best_mv;
+      }
   }
   // find best move by hardcoded best cases
   for (int i = 0; i < 9; i++) {
