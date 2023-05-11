@@ -1,5 +1,7 @@
-To compile this damn thing ^^
+this was a fun  speed competition against @Sofiane and @Daniel, 
+no winner was decided.
 
-    gcc -std=c11 .\tictactoe.c -I.\include -L .\lib -Wall -lmingw32 -lSDL2main -lSDL2 -o test 
+> To compile this damn thing ^^
+> Check the makefile
 
     
